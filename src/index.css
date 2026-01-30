@@ -109,7 +109,7 @@ body {
   padding: 1.25rem;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -144,6 +144,7 @@ body {
 .pillar-progress {
   text-align: right;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .pillar-progress-percent {
