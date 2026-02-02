@@ -59,13 +59,19 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 **Study Resources:**
 * [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/) – How to win the specificity war cleanly.
 
-### 2.2. Accessibility as a Functional Requirement
+### 2.2. Accessibility & WCAG 2.2 Compliance
+* **Understanding Levels (A, AA, AAA):**
+    * **Level A:** Basic accessibility (Essential).
+    * **Level AA:** The Enterprise Standard (Legal compliance for most projects).
+    * **Level AAA:** Maximum accessibility (Specialized use cases).
 * **Semantic HTML:** Replacing "div-itis" with meaningful native elements (\`<nav>\`, \`<main>\`, \`<article>\`, \`<button>\`).
-* **WAI-ARIA Patterns:** Implementing accessible states for dynamic components (modals, tabs, accordions).
+* **WAI-ARIA Patterns:** Implementing accessible states for dynamic components.
 
 **Study Resources:**
 * [Web Accessibility Checklist](https://www.a11yproject.com/checklist/) – A pragmatic guide for auditing components.
 * [HTML Semantic Elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html) – The reference for structural tags.
+* [WCAG 2.2 at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)** – Quick overview of the requirements.
+* [Accessibility Levels Explained](https://web.dev/learn/accessibility/foundations/#wcag-levels)** – Understanding the difference between A, AA, and AAA.
 
 ---
 
