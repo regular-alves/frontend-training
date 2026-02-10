@@ -18,6 +18,7 @@ function parseMarkdown(content) {
   let pillarCount = 0;
   let stageCount = 0;
   let collectingResources = false;
+  let collectingExercises = false;
 
   const flushContent = () => {
     if (currentStage && contentBuffer.length > 0) {
@@ -25,6 +26,7 @@ function parseMarkdown(content) {
     }
     contentBuffer = [];
     collectingResources = false;
+    collectingExercises = false;
   };
 
   const flushPillarDescription = () => {
@@ -92,7 +94,8 @@ function parseMarkdown(content) {
           id: `stage-${pillarCount}-${stageCount}`,
           title,
           content: '',
-          resources: []
+          resources: [],
+          exercises: []
         };
         currentPillar.stages.push(currentStage);
         currentSection = 'stage-content';
@@ -139,6 +142,14 @@ function parseMarkdown(content) {
       // Check for Study Resources marker
       if (line.match(/^\*\*Study Resources:\*\*/i)) {
         collectingResources = true;
+        collectingExercises = false;
+        continue;
+      }
+
+      // Check for Exercises marker
+      if (line.match(/^\*\*Exercises:\*\*/i)) {
+        collectingExercises = true;
+        collectingResources = false;
         continue;
       }
 
@@ -154,9 +165,26 @@ function parseMarkdown(content) {
         continue;
       }
 
+      // Collect exercise links
+      if (collectingExercises && line.includes('](')) {
+        const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
+        if (match) {
+          currentStage.exercises.push({
+            title: match[1],
+            url: match[2]
+          });
+        }
+        continue;
+      }
+
       // If we hit a non-link line after resources, stop collecting resources
       if (collectingResources && line.trim() !== '' && !line.includes('](')) {
         collectingResources = false;
+      }
+
+      // If we hit a non-link line after exercises, stop collecting exercises
+      if (collectingExercises && line.trim() !== '' && !line.includes('](')) {
+        collectingExercises = false;
       }
 
       // Skip empty lines at the start of content

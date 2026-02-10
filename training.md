@@ -26,6 +26,9 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 * [Learn Core Web Vitals](https://web.dev/learn-core-web-vitals/) – Technical guide on performance metrics.
 * [Largest Contentful Paint Guide](https://www.debugbear.com/docs/metrics/largest-contentful-paint) – How to diagnose and fix LCP issues.
 
+**Exercises:**
+* [1.1 Core Web Vitals](./exercises/1.1-core-web-vitals.md)
+
 ### 1.2. Technical Integration (`theme.json` + Tailwind)
 * **Single Source of Truth:** Centralizing design tokens (colors, fonts, spacing) within `theme.json`.
 * **Tailwind Sync:** Configuring `tailwind.config.js` to consume WordPress native CSS variables, ensuring the editor and the front-end stay in sync.
@@ -33,6 +36,9 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 **Study Resources:**
 * [Mastering theme.json](https://fullsiteediting.com/courses/mastering-theme-json/) – The definitive reference for modern theme configuration.
 * [Customizing the Tailwind Theme](https://tailwindcss.com/docs/theme) – How to extend the utility system correctly.
+
+**Exercises:**
+* [1.2 Design Tokens](./exercises/1.2-design-tokens.md)
 
 ---
 
@@ -51,6 +57,9 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 **Study Resources:**
 * [A Complete Guide to CSS Cascade Layers](https://css-tricks.com/css-cascade-layers/) – How to win the specificity war cleanly.
 
+**Exercises:**
+* [2.1 CSS Architecture](./exercises/2.1-css-architecture.md)
+
 ### 2.2. Accessibility & WCAG 2.2 Compliance
 * **Understanding Levels (A, AA, AAA):**
     * **Level A:** Basic accessibility (Essential).
@@ -64,6 +73,11 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 * [HTML Semantic Elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html) – The reference for structural tags.
 * [WCAG 2.2 at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)** – Quick overview of the requirements.
 * [Accessibility Levels Explained](https://web.dev/learn/accessibility/foundations/#wcag-levels)** – Understanding the difference between A, AA, and AAA.
+
+**Exercises:**
+* [2.2 Semantic HTML](./exercises/2.2-semantic-html.md)
+* [2.3 WCAG Compliance](./exercises/2.3-wcag-compliance.md)
+* [2.4 WAI-ARIA Patterns](./exercises/2.4-wai-aria.md)
 
 ---
 
@@ -83,8 +97,14 @@ In a WPVIP environment, performance is a technical requirement, not a "nice-to-h
 * [Interactivity API Reference](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/) – The new standard for JS in WordPress.
 * [Interactivity API Envelope](https://github.com/wordpress/interactivity-api-envelope) – Official demo repo for code deconstruction.
 
+**Exercises:**
+* [3.1 JS Scoping](./exercises/3.1-js-scoping.md)
+
 ### 3.2. Visual Regression Testing
 * **Playwright Visual Comparison:** Automating tests that compare screenshots to prevent "silent UI breaks" during refactors.
 
 **Study Resources:**
 * [Visual Comparisons](https://playwright.dev/docs/test-snapshots) – Setting up automated regression tests.
+
+**Exercises:**
+* [3.2 Visual Regression](./exercises/3.2-visual-regression.md)

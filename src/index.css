@@ -320,6 +320,30 @@ body {
   text-decoration: underline;
 }
 
+.stage-exercises {
+  margin-top: 1rem;
+}
+
+.stage-exercises h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.stage-exercises a {
+  display: block;
+  color: var(--color-success);
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.stage-exercises a:hover {
+  text-decoration: underline;
+}
+
 .stage-actions {
   display: flex;
   gap: 0.5rem;

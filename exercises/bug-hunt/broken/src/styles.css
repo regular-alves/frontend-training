@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-blue-600 {
+    background-color: #3b82f6 !important;
+}
+
+
+.hero > h1 {
+    margin-bottom: 10px;
+    padding-top: 50px;
+}
+
+
+.text-gray-600 {
+    color: #a0a0a0;
+}
+
+
+.p-4 {
+    padding: 20px;
+}
+
+
+.text-xl {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+img {
+    height: auto;
+}

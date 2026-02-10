@@ -57,6 +57,22 @@ function Stage({ stage, stageProgress, onStart, onComplete, onReset }) {
             </div>
           )}
 
+          {stage.exercises && stage.exercises.length > 0 && (
+            <div className="stage-exercises">
+              <h4>Exercises</h4>
+              {stage.exercises.map((exercise, idx) => (
+                <a
+                  key={idx}
+                  href={exercise.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {exercise.title}
+                </a>
+              ))}
+            </div>
+          )}
+
           {(status === 'in_progress' || status === 'completed') && (beforeState || afterState) && (
             <div className="evolution-comparison">
               <h4>Evolution</h4>
